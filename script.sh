@@ -90,8 +90,8 @@ yum install -y augeas crudini screen wget
 #yum install -y python-crypto
 yum install -y python-pip
 
-systemctl stop firewalld
-systemctl mask firewalld
+#systemctl stop firewalld
+#systemctl mask firewalld
 yum install -y iptables-services
 systemctl enable iptables
 
