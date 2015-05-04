@@ -90,7 +90,7 @@ yum install -y augeas crudini screen wget
 #yum install -y python-crypto
 yum install -y python-pip
 
-#yum install -y firewalld
+yum install -y firewalld
 #systemctl restart firewalld
 sudo systemctl stop firewalld
 sudo systemctl mask firewalld
