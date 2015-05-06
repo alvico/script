@@ -1,6 +1,6 @@
 #!/bin/bash -xe
 #
-
+setenforce 0
 systemctl mask NetworkManager
 systemctl stop NetworkManager
 cat > /etc/sysconfig/network-scripts/ifcfg-enp0s8 << MIDO_EOF
