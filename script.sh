@@ -16,6 +16,10 @@ MIDO_EOF
 systemctl enable network.service
 systemctl start network.service
 
+cat >> /etc/resolv.conf << EOF_MIDO
+nameserver 8.8.8.8
+nameserver 8.8.4.4
+EOF_MIDO
 
 # Repos
 #
@@ -61,12 +65,6 @@ name= DataStax Repo for Apache Cassandra
 baseurl=http://rpm.datastax.com/community
 enabled=1
 gpgcheck=0
-EOF_MIDO
-
-
-cat >> /etc/resolv.conf << EOF_MIDO
-nameserver 8.8.8.8
-nameserver 8.8.4.4
 EOF_MIDO
 
 # Updating and installing dependencies
